@@ -67,3 +67,56 @@ if os.path.isdir(docs_dir):
         st.caption("Note: You can plug a small seq2seq model (e.g., flan-t5-base) to generate a final answer from these contexts.")
 else:
     st.warning("Docs folder not found. Make sure it exists and contains PDFs.")
+
+# Tambahkan CSS untuk UI futuristik tapi tetap humble
+st.markdown("""
+    <style>
+    /* Background futuristik lembut */
+    .stApp {
+        background: radial-gradient(circle at 20% 20%, #0f2027, #203a43, #2c5364);
+        color: #e0e0e0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Sidebar */
+    section[data-testid="stSidebar"] {
+        background: rgba(20, 20, 30, 0.8);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Judul */
+    h1, h2, h3 {
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 0.5px;
+        color: #00d4ff;
+        text-shadow: 0px 0px 6px rgba(0, 212, 255, 0.4);
+    }
+
+    /* Tombol futuristik tapi simple */
+    button[kind="primary"] {
+        background: linear-gradient(90deg, #00d4ff, #0077ff);
+        color: white;
+        border-radius: 12px;
+        font-weight: 600;
+        padding: 0.6em 1.2em;
+        border: none;
+        box-shadow: 0 0 10px rgba(0,212,255,0.3);
+        transition: all 0.2s ease-in-out;
+    }
+    button[kind="primary"]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 16px rgba(0,212,255,0.6);
+    }
+
+    /* Kotak chat/doc */
+    .block-container {
+        background: rgba(255,255,255,0.02);
+        border-radius: 16px;
+        padding: 20px;
+        margin-top: 10px;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.title("🚀 Futuristic but Humble RAG App")
+st.write("Selamat datang di aplikasi AI")
